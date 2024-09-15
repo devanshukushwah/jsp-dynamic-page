@@ -3,10 +3,33 @@
   <servlet>
   	<servlet-name>add</servlet-name>
   	<servlet-class>com.jspdynamicpage.AddServlet</servlet-class>
+ 
   </servlet>
+  
+  <servlet>
+  	<servlet-name>MyServlet</servlet-name>
+  	<servlet-class>com.jspdynamicpage.MyServlet</servlet-class>
+  	
+  	<init-param>
+  	  	<param-name>name</param-name>
+  		<param-value>devanshu under MyServlet</param-value>
+  	</init-param>
+  </servlet>
+  
+  
   
   <servlet-mapping>
   	<servlet-name>add</servlet-name>
   	<url-pattern>/add</url-pattern>
   </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>MyServlet</servlet-name>
+  	<url-pattern>/MyServlet</url-pattern>
+  </servlet-mapping>
+  
+  <context-param>
+  	<param-name>name</param-name>
+  	<param-value>devanshu</param-value>
+  </context-param>
 </web-app>
