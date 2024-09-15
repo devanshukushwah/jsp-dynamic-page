@@ -19,11 +19,11 @@ public class AddServlet extends HttpServlet {
 		
 		int int1 = Integer.parseInt(req.getParameter("num1"));
 		
-		req.setAttribute("k", int1);
+		res.sendRedirect("sq?k=" + int1); // URL Rewriting.
 		
-		RequestDispatcher requestDispatcher = req.getRequestDispatcher("/sq");
-		
-		requestDispatcher.forward(req, res);
+//		RequestDispatcher requestDispatcher = req.getRequestDispatcher("/sq");
+//		
+//		requestDispatcher.forward(req, res);
 		
 		
 //		PrintWriter writer = res.getWriter();

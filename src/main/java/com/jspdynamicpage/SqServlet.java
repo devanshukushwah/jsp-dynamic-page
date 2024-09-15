@@ -18,8 +18,8 @@ public class SqServlet extends HttpServlet {
 
 	
 	@Override
-	public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
-		int k = (int) req.getAttribute("k");
+	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
+		int k = Integer.parseInt(req.getParameter("k"));
 		k = k*k;
 		PrintWriter out = res.getWriter();
 		out.print("Sq Result: " + k);
