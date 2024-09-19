@@ -1,6 +1,7 @@
 package com.jspdynamicpage;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -21,12 +22,12 @@ public class AddServlet extends HttpServlet {
 		
 		int int1 = Integer.parseInt(req.getParameter("num1"));
 
-		res.addCookie(new Cookie("k", int1 + ""));
+//		res.addCookie(new Cookie("k", int1 + ""));
 		
 //		HttpSession session = req.getSession();
 //		session.setAttribute("k", int1);
 		
-		res.sendRedirect("sq");
+//		res.sendRedirect("sq");
 		
 //		res.sendRedirect("sq?k=" + int1); // URL Rewriting.
 		
@@ -35,8 +36,8 @@ public class AddServlet extends HttpServlet {
 //		requestDispatcher.forward(req, res);
 		
 		
-//		PrintWriter writer = res.getWriter();
-//		int ans = int1 * int1;
-//		writer.print("<p>Result: " + ans + "</p>");
+		PrintWriter writer = res.getWriter();
+		int ans = int1 * int1;
+		writer.print("<p>Result: " + ans + "</p>");
 	}
 }
